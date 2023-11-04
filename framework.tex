@@ -1,0 +1,9 @@
+% Define a custom command to include an image using xparse
+\NewDocumentCommand{\img}{O{1} O{debug.png} O{YOUR CAPTION GOES HERE} O{LABEL}}{%
+  \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=#1\textwidth]{#2}
+    \caption{#3}
+    \label{fig:#4}
+  \end{figure}%
+}
